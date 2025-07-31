@@ -9,7 +9,7 @@ filters:
     - mysql
 
 keyed_groups:
-  - prefix: instances
+  - prefix: tag
     key: 
     separator: "-"
 
