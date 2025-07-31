@@ -1,0 +1,14 @@
+plugin: amazon.aws.aws_ec2
+keyed_groups:
+  - prefix: "{{ item }}"
+    separator: "-"
+    key: dynamic
+    loop:
+     - frontend
+     - backend
+     - mysql
+  - amazon.aws.aws_region_info:
+    filters:
+      region-name: us-east-1
+
+  
