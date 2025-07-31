@@ -1,14 +1,17 @@
 plugin: amazon.aws.aws_ec2
-amazon.aws.aws_region_info:
-    filters:
-      region-name: us-east-1
+regions:
+  - us-east-1
+
+filters:
+  tag:Project:
+    - frontend
+    - backend
+    - mysql
+
 keyed_groups:
-  - prefix: "{{ item }}"
+  - prefix: tag
+    key: tags.Project
     separator: "-"
-    key: dynamic
-    loop:
-     - frontend
-     - backend
-     - mysql
+
 
   
