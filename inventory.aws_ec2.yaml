@@ -3,14 +3,14 @@ regions:
   - us-east-1
 
 filters:
-  tag:Project:
+  tag: instances
     - frontend
     - backend
     - mysql
 
 keyed_groups:
-  - prefix: tag
-    key: tags.Project
+  - prefix: instances
+    key: 
     separator: "-"
 
 
